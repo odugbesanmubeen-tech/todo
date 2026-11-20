@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart To-Do | Stay Productive</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <main class="dashboard">
+
+    <header class="header">
+      <div class="logo">✓</div>
+      <h1>Smart <span>To-Do</span></h1>
+      <p>Plan your day. Organize your life. Achieve more.</p>
+    </header>
+
+    <section class="task-section">
+
+      <form id="f" class="task-form">
+        <input id="t" type="text" placeholder="✦  What needs to be done?" required>
+        <input id="d" type="date" aria-label="Task deadline">
+
+        <select id="p" aria-label="Task priority">
+          <option>High</option>
+          <option selected>Medium</option>
+          <option>Low</option>
+        </select>
+
+        <button type="submit" class="add-btn">
+          <span>＋</span> Add Task
+        </button>
+      </form>
+
+      <div class="search-row">
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="q" type="search" placeholder="Search your tasks...">
+        </div>
+
+        <select id="fl" aria-label="Filter tasks">
+          <option>All</option>
+          <option>Completed</option>
+          <option>Pending</option>
+        </select>
+      </div>
+
+      <section class="stats">
+
+        <div class="stat-item">
+          <div class="stat-icon completed-icon">✓</div>
+          <div>
+            <h2 id="completed-count">0</h2>
+            <p>Completed</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon pending-icon">◷</div>
+          <div>
+            <h2 id="pending-count">0</h2>
+            <p>Pending</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon priority-icon">☆</div>
+          <div>
+            <h2 id="priority-count">0</h2>
+            <p>High Priority</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-icon total-icon">▦</div>
+          <div>
+            <h2 id="total-count">0</h2>
+            <p>Total Tasks</p>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="task-heading">
+        <h2>My Tasks</h2>
+        <span id="n">0 tasks</span>
+      </div>
+
+      <ul id="l"></ul>
+
+    </section>
+
+    <footer>
+      <p>✦ Stay focused. Keep growing. Make every day count.</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
